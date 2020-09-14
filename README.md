@@ -1,2 +1,3 @@
-# ui5
-SAP academy
+# SAP UI5
+
+This are notes taking during code training.
