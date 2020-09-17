@@ -164,6 +164,7 @@ METHOD clientesset_get_entityset.
         APPEND ls_entity TO et_entityset.
       ENDLOOP.
     ENDIF.
+    
 ENDMETHOD.
 
 "Get Entity - Clientes"

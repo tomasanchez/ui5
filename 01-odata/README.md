@@ -118,7 +118,7 @@ end method.
 
 ## Publicando Servicios oData
 
-Transaccion nro. /n/iwfnd/maint_services
+Transaccion ```/n/iwfnd/maint_services```
 
 Utilizar -> Alias :: LOCAL.
 

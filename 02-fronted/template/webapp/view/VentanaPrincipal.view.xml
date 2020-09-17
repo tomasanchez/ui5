@@ -1,0 +1,102 @@
+<mvc:View controllerName="softtek.primerproyecto.controller.VentanaPrincipal" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Button text="Leer Vuelos" press="onPressBoton"/>
+						<Button text="Leer Vuelo especifico" press="onPressLeerVuelo"/>
+						<Button text="Crear Vuelo" press="onPressCrearVuelo"/>
+						<!--<Button text="Leer Vuelo especifico" press="onPressBotonError"/> -->
+						<HBox>
+							<Label text="Ingrese un nro de Vuelo" labelFor="vuelo"/>
+							<Input id="vuelo" width="5rem" value="DEFAULT"/>
+						</HBox>
+						<ScrollContainer height="15rem" vertical="true">
+							<Table items="{NUEVOMODELO>/}" noDataText="No se encontraron datos">
+								<!--<Table items="{/VueloSet}">-->
+								<columns>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Vuelo COLUMNA"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Matricula"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Calidad"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Descripcion"/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Text text=""/>
+										</header>
+									</Column>
+									<Column>
+										<header>
+											<Text text=""/>
+										</header>
+									</Column>
+									
+									
+									<Column>
+										<header>
+											<Text text=""/>
+										</header>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<ObjectIdentifier text="{NUEVOMODELO>Idvuelo}"/>
+											<ObjectIdentifier text="{NUEVOMODELO>Matricula}"/>
+											<ObjectIdentifier text="Esta es la Calidad: {NUEVOMODELO>Calidad}"/>
+											<Input value="{NUEVOMODELO>Descripcion}"/>
+											<Button icon="sap-icon://edit" press="onEditVuelo"/>
+											<Button icon="sap-icon://delete" press="onDeleteVuelo"/>
+											<Button text="Mostrar Flujo" press="onMostrarFlujo"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</ScrollContainer>
+						<ScrollContainer height="10rem">
+							<Table items="{Flujo>/}" noDataText="No se encontraron datos">
+								<!--<Table items="{/VueloSet}">-->
+								<columns>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Vuelo COLUMNA"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Matricula"/>
+										</header>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<ObjectIdentifier text="{Flujo>Estado}"/>
+											<ObjectIdentifier text="{Flujo>Responsable}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</ScrollContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

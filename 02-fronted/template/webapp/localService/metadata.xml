@@ -1,0 +1,60 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZOS_CA_LUUC3_ACADEMIA_SRV" xml:lang="es" sap:schema-version="1">
+			<EntityType Name="Vuelo" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Idvuelo"/>
+					</Key>
+				<Property Name="Idvuelo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Id de Vuelo" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matricula" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Matricula" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Peso" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Peso bruto"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aeropuertooperacion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="aep. operacion"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aeropuertoorigen" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="aep. Origen"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Aeropuertodestino" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="aep. Destino"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Paisoperacion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="País" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Paisorigen" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="País" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Paisdestino" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="País" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fecharealaterrizaje" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fecharealdespegue" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fechabloqueoaterrizaje" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fechabloqueodespegue" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Pasajerosorigen" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="int" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Pasajerosdestino" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="int" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Horarealaterrizaje" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Horarealdespegue" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Horabloqueoaterrizaje" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Horabloqueodespegue" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Procesado" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicador" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Calidad" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Calidad Vuelo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ocupacion" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="%Ocupacion Vuelo"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Estado" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Estado Vuelo" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Descripcion"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="FlujoVueloSet" Relationship="ZOS_CA_LUUC3_ACADEMIA_SRV.VuelosToFlujos" FromRole="FromRole_VuelosToFlujos"
+					ToRole="ToRole_VuelosToFlujos"/></EntityType>
+			<EntityType Name="FlujoVuelo" sap:content-version="1">
+				<Key><PropertyRef Name="Idvuelo"/>
+				<PropertyRef Name="Estado"/></Key><Property Name="Idvuelo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Id de Vuelo" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Estado" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Estado Vuelo" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FechaActualizacion" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Fecha" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="HoraActualizacion" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Hora" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Responsable" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Descripcion"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="Vuelo" Relationship="ZOS_CA_LUUC3_ACADEMIA_SRV.VuelosToFlujos" FromRole="ToRole_VuelosToFlujos"
+					ToRole="FromRole_VuelosToFlujos"/></EntityType>
+			<Association Name="VuelosToFlujos" sap:content-version="1"><End Type="ZOS_CA_LUUC3_ACADEMIA_SRV.Vuelo" Multiplicity="1" Role="FromRole_VuelosToFlujos"/><End Type="ZOS_CA_LUUC3_ACADEMIA_SRV.FlujoVuelo" Multiplicity="*" Role="ToRole_VuelosToFlujos"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_VuelosToFlujos"><PropertyRef Name="Idvuelo"/></Principal>
+					<Dependent Role="ToRole_VuelosToFlujos"><PropertyRef Name="Idvuelo"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZOS_CA_LUUC3_ACADEMIA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="VueloSet" EntityType="ZOS_CA_LUUC3_ACADEMIA_SRV.Vuelo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/><EntitySet Name="FlujoVueloSet" EntityType="ZOS_CA_LUUC3_ACADEMIA_SRV.FlujoVuelo" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="VuelosToFlujosSet" Association="ZOS_CA_LUUC3_ACADEMIA_SRV.VuelosToFlujos" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="VueloSet" Role="FromRole_VuelosToFlujos"/>
+					<End EntitySet="FlujoVueloSet" Role="ToRole_VuelosToFlujos"/></AssociationSet>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZOS_CA_LUUC3_ACADEMIA_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZOS_CA_LUUC3_ACADEMIA_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
