@@ -122,3 +122,18 @@ Transaccion ```/n/iwfnd/maint_services```
 
 Utilizar -> Alias :: LOCAL.
 
+## JavaScript
+
+###  Master detail
+
+Para crear necesitamos:
+
+```xml
+
+<SplitApp id="THS_ID" initialMaster="master_id">
+		<masterPages>
+			<Page title="My Gym" id="master_id" class="sapUiStdPage">
+			</Page>
+		</masterPages>
+	</SplitApp>
+```
