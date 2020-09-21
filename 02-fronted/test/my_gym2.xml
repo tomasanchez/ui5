@@ -1,0 +1,116 @@
+<mvc:View controllerName="TOSA8.My_Gym2.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form" xmlns:smartList="sap.ui.comp.smartlist" xmlns="sap.m">
+	<SplitApp id="gym" initialMaster="clients">
+		<masterPages>
+			<Page title="My Gym" id="clients" class="sapUiStdPage">
+				<List id="clientList" 
+				mode="Delete"
+				delete="handleDelete"
+				growing="true"
+				headerText="Clientes"
+				items="{/ClientesSet}" sticky="ColumnHeaders">
+					<headerToolbar>
+						<OverflowToolbar>
+							<Title text="Mis clientes" level="H2"/>
+						</OverflowToolbar>
+					</headerToolbar>
+					<infoToolbar>
+						<OverflowToolbar active="true">
+							<Label text="Estos son los cientes actualmente activos"/>
+						</OverflowToolbar>
+					</infoToolbar>
+					<StandardListItem type="Navigation" title="{Apellido}" description="{Nombre}"/>
+				</List>
+				<!-- </ScrollContainer> -->
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page title="Detalles">
+				<Table items="{oneClient/}" noDataText="Seleccione un cliente">
+					<!--<Table items="{/VueloSet}">-->
+					<columns>
+						<Column hAlign="Begin" width="10rem">
+							<header>
+								<Text text="Nro de cliente"/>
+							</header>
+						</Column>
+						<Column hAlign="Begin" width="10rem">
+							<header>
+								<Text text="Nombre"/>
+							</header>
+						</Column>
+						<Column hAlign="Begin" width="10rem">
+							<header>
+								<Text text="Apellido"/>
+							</header>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier text="{oneClient>IdClte}"/>
+								<ObjectIdentifier text="{oneClient>Nombre}"/>
+								<ObjectIdentifier text="{oneClient>Apellido}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				
+				<Table items="{oneClient/}" showNoData="false">
+					<!--<Table items="{/DeportesSet}">-->
+					<columns>
+						<Column hAlign="Begin" width="5rem">
+							<header>
+								<Text text="CP"/>
+							</header>
+						</Column>
+						<Column hAlign="Begin" width="10rem">
+							<header>
+								<Text text="Telefono"/>
+							</header>
+						</Column>
+						<Column hAlign="Begin" width="10rem">
+							<header>
+								<Text text="Direccion"/>
+							</header>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier text="{oneClient>Post}"/>
+								<ObjectIdentifier text="{oneClient>Telf}"/>
+								<ObjectIdentifier text="{oneClient>Calle}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				
+				<Table items="oneClientSports/" noDataText="No posee deportes">
+					<columns>
+						<Column>
+							<header>
+								<Text text="Deporte Subscripto"/>
+							</header>
+						</Column>
+						<Column>
+							<header>
+								<Text text="Dias"/>
+							</header>
+						</Column>
+					</columns>
+					
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier text="{oneClientSports>IdDep}"/>
+								<ObjectIdentifier text="{oneClientSports>Horarios}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+				
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
