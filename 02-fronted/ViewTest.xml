@@ -1,0 +1,73 @@
+<mvc:View controllerName="TOSA8.My_Gym2.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form" xmlns:smartList="sap.ui.comp.smartlist" xmlns="sap.m">
+	<SplitApp id="gym" initialMaster="clients">
+		<masterPages>
+			<Page title="{i18n>title}" id="clients" class="sapUiStdPage">
+				<List id="clientList" growing="true" headerText="Clientes" items="{/ClientesSet}" sticky="ColumnHeaders" growingThreshold="10">
+					<headerToolbar>
+						<OverflowToolbar>
+							<Title text="Mis clientes" level="H2"/>
+						</OverflowToolbar>
+					</headerToolbar>
+					<infoToolbar>
+						<OverflowToolbar active="true">
+							<Label text="Estos son los cientes actualmente activos"/>
+						</OverflowToolbar>
+					</infoToolbar>
+					<StandardListItem type="Navigation" title="{Apellido}" description="{Nombre}" press="onPressClient"/>
+				</List>
+				<!-- </ScrollContainer> -->
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="clientDetails" title="Detalles" showHeader="true">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<Label text="Detalles del cliente"/>
+						</contentLeft>
+						<contentRight>
+							<Button id="edit" text="Editar" press="handleEditPress"/>
+							<Button id="save" text="Guardar" type="Emphasized" visible="false" press="handleSavePress"/>
+							<Button id="cancel" text="Cancelar" visible="false" press="handleCancelPress"/>
+						</contentRight>
+					</Bar>
+				</customHeader>
+					<Label text="ID"/>
+					<Input id="clientID" value="{CLIENT>IdClte}" editable="false"/>
+					<Label text="{i18n>clientName}"/>
+					<Input id="clientName" value="{CLIENT>Nombre}" editable="false"/>
+					<Label text="{i18n>clientSurname}"/>
+					<Input id="clientLastName" value="{CLIENT>Apellido}" editable="false"/>
+					<Label text="{i18n>clientPost}"/>
+					<Input id="clientCP" value="{CLIENT>Post}" editable="false"/>
+					<Label text="{i18n>clientTel}"/>
+					<Input id="clientTel" type="Tel" value="{CLIENT>Telf}" editable="false"/>
+					<Label text="{i18n>clientStreet}"/>
+					<Input id="clientStreet" value="{CLIENT>Calle}" editable="false"/>
+				<Table items="{oneClientSports>/}" id="csportsTable" noDataText="Sin deportes">
+					<columns>
+						<Column>
+							<header>
+								<Text text="Deporte Subscripto"/>
+							</header>
+						</Column>
+						<Column>
+							<header>
+								<Text text="Dias"/>
+							</header>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier text="{oneClientSports>IdDep}"/>
+								<ObjectIdentifier text="{oneClientSports>Horarios}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
