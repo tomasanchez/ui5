@@ -62,3 +62,11 @@ handleDelete: function(oEvent) {
 this.oProductModel.remove(sPath);
 }
 ```
+
+```js
+//Al traer entity_set debemos usar result.results
+loadClientSport : function (resultArray){
+			var modelJSON = new sap.ui.model.json.JSONModel(resultArray.results);
+			this.getView().byId("csportsTable").setModel(modelJSON, "oneClientSports");
+		}
+```
