@@ -1,0 +1,14 @@
+<mvc:View controllerName="softtek.nevegacion.controller.vista1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page title="{i18n>title}">
+		<content>
+			<HBox>
+				<Label text="Hola, soy la vista1"></Label>
+			</HBox>
+			<Button text="navegar" press="navegar"/>
+			<HBox>
+				<Label text="Ingrese Nombre"/>
+				<Input id="nombre"/>
+			</HBox>
+		</content>
+	</Page>
+</mvc:View>
