@@ -1,0 +1,8 @@
+<mvc:View controllerName="tosa8.my_gym.controller.Home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="page" title="{i18n>title}" class="sapUiResponsiveContentPadding">
+		<content>
+			<Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press="onDisplayNotFound" class="sapUiTinyMarginEnd"/>
+			<Button id="employeeListBtn" text="{i18n>ShowClientList}" press="onNavToClients" class="sapUiTinyMarginEnd"/>
+		</content>
+	</Page>
+</mvc:View>
