@@ -11,11 +11,11 @@ MM y MD :: modulos logisticos :: Compras - Ventas.
 /nse37 -> Funciones.
 ```
 
-#### Todo programa u objeto que deba crear en SAP comienza con 'z'
+#### Todo programa u objeto que deba crear en SAP comienza con 'Z'
 
 ## Relacional
 
-Es un sistema Realcional -> Basados en base de datos relaciones utilizan tablas con 'Primary Key" and 'Foreign Key'.
+Es un sistema Realcional -> Basados en base de datos relaciones utilizan tablas con 'Primary Key" y 'Foreign Key'.
 
 Si deseo todas las posiciones utilizo **foreing key**, una posicion particular **primary key**.
 
@@ -139,7 +139,7 @@ ELSE.
 ENDIF.
 ```
 
-ABBAT avanzo y ahora podemos reemplazar **TYPES** y **DATA** con:
+ABAP avanzo y ahora podemos reemplazar **TYPES** y **DATA** con:
 
 ```ABAP
 select modelo  color FROM ztca_cab_partes
