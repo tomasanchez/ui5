@@ -1,11 +1,13 @@
 METHOD obtener_remitos_3.
 
 * Obtengo la Fecha de Vencimiento del Acuerdo
+  DATA lv_gueen TYPE vbak-gueen.
   CLEAR: e_gueen.
   SELECT SINGLE gueen
     FROM vbak
-    INTO e_gueen
+    INTO lv_gueen
     WHERE vbeln EQ i_remito-ac_negocio.
+  MOVE lv_gueen TO e_gueen.
 
 * Obtengo la Poblacion Dest Pe.
   CLEAR: e_adrnr.
