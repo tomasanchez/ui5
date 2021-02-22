@@ -19,7 +19,7 @@ METHOD obtener_remitos_3.
 
 * Obtengo las patentes
   DATA: ls_likp TYPE likp.
-  SELECT SINGLE traid xabln " Del camion y/o del remolque
+  SELECT SINGLE * " Del camion y/o del remolque
     FROM likp
     INTO ls_likp
     WHERE vbeln EQ i_remito-entrega.
