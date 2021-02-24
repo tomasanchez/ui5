@@ -116,6 +116,15 @@ METHOD remitosset_get_entityset.
 
 * Devulvo la cantidad de toneladas para el Tile
   es_response_context-count = lv_tns.
+  
+* Aplico Paginacion
+    IF is_paging IS NOT INITIAL.
+      CALL METHOD /iwbep/cl_mgw_data_util=>paging
+        EXPORTING
+          is_paging = is_paging
+        CHANGING
+          ct_data   = et_entityset.
+    ENDIF.
 
   FIELD-SYMBOLS:
                  <fs_entity> LIKE LINE OF et_entityset.
